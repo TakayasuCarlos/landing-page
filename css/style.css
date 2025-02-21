@@ -1,0 +1,255 @@
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: #222;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ==========================================================================
+   Container Principal
+   ========================================================================== */
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   Títulos e Textos
+   ========================================================================== */
+
+h1 {
+  color: #ff4081;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.2em;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   Botão de CTA (Call to Action)
+   ========================================================================== */
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff4081, #ff1744);
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #ff1744, #d50000);
+  transform: scale(1.1);
+  box-shadow: 5px 15px rgba(255, 23, 68, 0.6);
+}
+
+/* ==========================================================================
+   Carrossel Swiper.js
+   ========================================================================== */
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: white;
+  border-radius: 10px;
+}
+
+/* ==========================================================================
+   Responsividade
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .swiper {
+    height: 250px;
+  }
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: white;
+  border-radius: 10px;
+}
+
+#animated-text {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #ff4081;
+  text-shadow: 0 0 10px #ff4081, 0 0 20px #ff0055;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ff4081, 0 0 10px #ff4081;
+  }
+  to {
+    text-shadow: 0 0 15px #ff0055, 0 0 20px #ff0055;
+  }
+}
+
+.buy-button {
+  display: block;
+  width: 150px;
+  margin: 10px auto;
+  padding: 10px 15px;
+  text-align: center;
+  background-color: #ff4081;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.buy-button:hover {
+  background-color: #ff0055;
+}
+
+.swiper {
+  width: 100%;
+  height: auto; /* Permite que os slides se ajustem automaticamente */
+  margin-top: 20px;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column; /* Coloca a imagem e o botão um abaixo do outro */
+  align-items: center;
+  justify-content: center;
+  min-height: 380px; /* Ajustado para não cortar o botão */
+  padding-bottom: 20px;
+}
+
+/* Ajuste para os botões dentro do carrossel */
+.buy-button {
+  display: inline-block;
+  width: 160px;
+  margin-top: 15px;
+  padding: 10px 15px;
+  text-align: center;
+  background-color: #ff4081;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.buy-button:hover {
+  background-color: #ff0055;
+}
+
+/* Estilo do texto informativo sobre skincare */
+.skincare-info {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: left;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skincare-info h3 {
+  color: #ff4081;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.skincare-info h4 {
+  color: #ff1744;
+  font-size: 1.4em;
+  margin-top: 20px;
+}
+
+.skincare-info p {
+  font-size: 1.1em;
+  color: #444;
+  line-height: 1.6;
+}
+
+.skincare-info .buy-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.skincare-info .buy-container .buy-button {
+  display: inline-block;
+  background: #ff4081;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.skincare-info .buy-container .buy-button:hover {
+  background: #ff0055;
+}
