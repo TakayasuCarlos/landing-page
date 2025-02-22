@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Luxury Skincare Deals</title>
   <meta name="description" content="Discover the best skincare deals with exclusive discounts.">
 
@@ -18,98 +16,75 @@
   <!-- Estilos -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Cor do navegador (opcional) -->
-  <meta name="theme-color" content="#ff4081">
-
   <!-- Swiper.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
 
-<!-- Conteúdo do site -->
-<div class="container">
-  <h1>Welcome to Luxury Skincare Deals</h1>
-  <h2 id="animated-text"></h2>
-  <div class="skincare-info">
-    <h3>The Importance of Skincare: How to Keep Your Skin Healthy</h3>
-    <p>
-      Taking care of your skin is essential for maintaining a youthful and radiant appearance.
-      Proper skincare not only enhances your beauty but also protects your skin from environmental damage and premature aging.
-    </p>
-
-    <h4>1. Cleanse Your Skin Daily</h4>
-    <p>
-      Washing your face every morning and night helps remove dirt, oil, and impurities that can clog pores and cause breakouts.
-      Use a gentle cleanser suited for your skin type.
-    </p>
-
-    <h4>2. Hydrate and Moisturize</h4>
-    <p>
-      Keeping your skin hydrated is crucial for maintaining its elasticity and preventing dryness.
-      Use a moisturizer that suits your skin type to keep it soft and smooth.
-    </p>
-
-    <h4>3. Apply Sunscreen Daily</h4>
-    <p>
-      UV rays are one of the main causes of premature aging and skin damage.
-      Always use a broad-spectrum sunscreen with at least SPF 30 to protect your skin from harmful sun exposure.
-    </p>
-
-    <h4>4. Use High-Quality Skincare Products</h4>
-    <p>
-      Investing in high-quality skincare products can make a big difference in your skin’s health.
-      Look for products that contain beneficial ingredients like hyaluronic acid, vitamin C, and retinol.
-    </p>
-
-    <h4>5. Maintain a Healthy Diet and Lifestyle</h4>
-    <p>
-      What you eat affects your skin. A balanced diet rich in antioxidants, vitamins, and water will help your skin look fresh and youthful.
-      Avoid smoking and excessive alcohol consumption, as they can lead to dull and aging skin.
-    </p>
-
-    <p class="cta-text">
-      Taking care of your skin is an investment in your overall well-being.
-    </p>
-    <div class="buy-container">
-      <a href="https://amzn.to/3X4369v" class="buy-button">Best Skincare Deals</a>
-    </div>
-
+<!-- Seção Hero com GIF e CTA -->
+<header class="hero-section">
+  <div class="hero-content">
+    <h1 class="animated-title">Your Skin Deserves Luxury</h1>
+    <p class="hero-subtext fade-in-text">Exclusive deals on premium skincare products.</p>
+    <a href="#offers" class="cta-button">Get Your Deal Now</a>
   </div>
+  <div class="hero-image">
+    <img src="img/hero.gif" alt="Skincare GIF" class="fade-in">
+  </div>
+</header>
 
-
+<!-- Contador de Promoção -->
+<div class="countdown-container">
+  <p class="countdown-text">Limited Time Offer: <span id="countdown" class="countdown-effect"></span></p>
 </div>
 
-<div class="swiper mySwiper">
+<!-- Carrossel de Produtos -->
+<section id="offers" class="swiper mySwiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      <img src="img/1.jpg" alt="Product 1" style="width: 280px; height: auto; display: block; margin: 0 auto;"/>
-      <a href="https://amzn.to/SEU-LINK-1" class="buy-button" target="_blank">Buy Now</a>
+      <img src="img/1.jpg" alt="Product 1" class="zoom-effect"/>
+      <div class="buy-button-container">
+        <a href="https://amzn.to/418pgbW" class="buy-button" target="_blank">Buy Now</a>
+      </div>
     </div>
     <div class="swiper-slide">
-      <img src="img/2.jpeg" alt="Product 2" style="width: 240px; height: auto; display: block; margin: 0 auto;"/>
-      <a href="https://amzn.to/SEU-LINK-2" class="buy-button" target="_blank">Buy Now</a>
+      <img src="img/2.jpeg" alt="Product 2" class="zoom-effect product-resized"/>
+      <div class="buy-button-container">
+        <a href="https://amzn.to/4hMZbGB" class="buy-button" target="_blank">Buy Now</a>
+      </div>
     </div>
     <div class="swiper-slide">
-      <img src="img/3.jpeg" alt="Product 3" style="width: 280px; height: auto; display: block; margin: 0 auto;"/>
-      <a href="https://amzn.to/SEU-LINK-3" class="buy-button" target="_blank">Buy Now</a>
+      <img src="img/3.jpeg" alt="Product 3" class="zoom-effect"/>
+      <div class="buy-button-container">
+        <a href="https://amzn.to/3Qtxiar" class="buy-button" target="_blank">Buy Now</a>
+      </div>
     </div>
     <div class="swiper-slide">
-      <img src="img/4.jpeg" alt="Product 4" style="width: 280px; height: auto; display: block; margin: 0 auto;"/>
-      <a href="https://amzn.to/SEU-LINK-4" class="buy-button" target="_blank">Buy Now</a>
+      <img src="img/4.jpeg" alt="Product 4" class="zoom-effect"/>
+      <div class="buy-button-container">
+        <a href="https://amzn.to/4hKhnkf" class="buy-button" target="_blank">Buy Now</a>
+      </div>
     </div>
   </div>
   <div class="swiper-pagination"></div>
-</div>
+</section>
 
+<!-- Seção de Cuidados com a Pele -->
+<section class="skincare-tips">
+  <h2 class="highlighted-text">Why Skincare Matters</h2>
+  <p class="highlighted-description">Taking care of your skin is essential for maintaining a youthful and healthy glow. Regular cleansing, moisturizing, and using sun protection can help prevent aging and keep your skin radiant.</p>
+</section>
 
-
-<!-- Swiper.js JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Footer -->
+<footer>
+  <p>This landing page is an Amazon affiliate site. Purchases are 100% secure and processed through Amazon's trusted platform.</p>
+</footer>
 
 <!-- Scripts -->
-<script src="js/app.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

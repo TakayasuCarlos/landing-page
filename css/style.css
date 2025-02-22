@@ -1,59 +1,162 @@
-/* ==========================================================================
-   Base Styles
-   ========================================================================== */
-
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  color: #222;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #f5f5f5;
+  color: #333;
   text-align: center;
-  padding: 20px;
 }
 
-/* ==========================================================================
-   Container Principal
-   ========================================================================== */
+/* Seção Hero */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: linear-gradient(135deg, #ff4081, #ff1744);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
 
-.container {
-  max-width: 900px;
-  margin: 20px auto;
-  background: white;
-  padding: 20px;
+/* Efeito de letras caindo no título */
+.animated-title {
+  font-size: 36px;
+  font-weight: bold;
+  opacity: 0;
+  position: relative;
+  animation: dropTitle 1.5s ease-out forwards;
+}
+
+@keyframes dropTitle {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efeito fade-in no subtítulo */
+.fade-in-text {
+  font-size: 20px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Ajuste da imagem do segundo produto para manter proporção correta */
+.product-resized {
+  width: 100%;
+  max-width: 250px; /* Mesmo tamanho das outras imagens */
+  height: 250px; /* Força uma altura fixa */
+  object-fit: cover; /* Recorta a imagem para caber sem distorcer */
+  object-position: center; /* Mantém o centro da imagem visível */
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px; /* Mantém um design uniforme */
+}
+
+
+/* Efeito especial para o Countdown Timer */
+.countdown-effect {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff1744;
+  background: linear-gradient(135deg, #ff4081, #ff1744);
+  padding: 10px 15px;
   border-radius: 10px;
-  box-shadow: 5px 15px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+  animation: pulse 1.5s infinite alternate;
 }
 
-/* ==========================================================================
-   Títulos e Textos
-   ========================================================================== */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.1); opacity: 1; }
+}
 
-h1 {
+
+/* Seção de Cuidados com a Pele */
+.skincare-tips {
+  margin: 50px auto;
+  padding: 30px;
+  max-width: 800px;
+  background: #ffecec;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(255, 64, 129, 0.3);
+}
+
+.highlighted-text {
+  font-size: 28px;
+  font-weight: bold;
   color: #ff4081;
-  font-size: 2em;
-  margin-bottom: 15px;
 }
 
-p {
-  font-size: 1.2em;
-  color: #444;
-  margin-bottom: 15px;
+.highlighted-description {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
 }
 
-/* ==========================================================================
-   Botão de CTA (Call to Action)
-   ========================================================================== */
+/* Ajuste no botão de compra abaixo da imagem */
+.buy-button-container {
+  margin-top: 10px;
+  text-align: center;
+}
 
+/* Botões de Compra */
+.buy-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff4081, #ff1744);
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+}
+
+.buy-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 64, 129, 0.5);
+  filter: brightness(1.2);
+}
+
+/* Corrigir tamanho da imagem do segundo produto */
+.product-fix {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background: #222;
+  color: white;
+  font-size: 14px;
+}
+
+/* Animação para o botão "Get Your Deal Now" */
 .cta-button {
   display: inline-block;
   background: linear-gradient(135deg, #ff4081, #ff1744);
@@ -64,192 +167,61 @@ p {
   font-size: 18px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  margin-top: 20px;
+  animation: pulse 1.5s infinite;
 }
 
 .cta-button:hover {
-  background: linear-gradient(135deg, #ff1744, #d50000);
   transform: scale(1.1);
-  box-shadow: 5px 15px rgba(255, 23, 68, 0.6);
+  box-shadow: 0 5px 15px rgba(255, 64, 129, 0.5);
 }
 
-/* ==========================================================================
-   Carrossel Swiper.js
-   ========================================================================== */
-
-.swiper {
-  width: 100%;
-  height: 300px;
-  margin-top: 20px;
+/* Efeito de pulsação no botão */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  color: white;
+/* Ajuste no tamanho das imagens do carrossel */
+.swiper-slide img {
+  max-width: 300px;
+  height: auto;
   border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* ==========================================================================
-   Responsividade
-   ========================================================================== */
-
-@media (max-width: 768px) {
-  .container {
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 1.8em;
-  }
-
-  p {
-    font-size: 1em;
-  }
-
-  .cta-button {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-
-  .swiper {
-    height: 250px;
-  }
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  color: white;
-  border-radius: 10px;
-}
-
-#animated-text {
+/* Efeito animado para o Countdown Timer */
+.countdown-effect {
   font-size: 24px;
   font-weight: bold;
-  text-align: center;
-  color: #ff4081;
-  text-shadow: 0 0 10px #ff4081, 0 0 20px #ff0055;
-  animation: glow 1.5s infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 5px #ff4081, 0 0 10px #ff4081;
-  }
-  to {
-    text-shadow: 0 0 15px #ff0055, 0 0 20px #ff0055;
-  }
-}
-
-.buy-button {
-  display: block;
-  width: 150px;
-  margin: 10px auto;
-  padding: 10px 15px;
-  text-align: center;
-  background-color: #ff4081;
   color: white;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease-in-out;
-}
-
-.buy-button:hover {
-  background-color: #ff0055;
-}
-
-.swiper {
-  width: 100%;
-  height: auto; /* Permite que os slides se ajustem automaticamente */
-  margin-top: 20px;
-}
-
-.swiper-slide {
-  display: flex;
-  flex-direction: column; /* Coloca a imagem e o botão um abaixo do outro */
-  align-items: center;
-  justify-content: center;
-  min-height: 380px; /* Ajustado para não cortar o botão */
-  padding-bottom: 20px;
-}
-
-/* Ajuste para os botões dentro do carrossel */
-.buy-button {
-  display: inline-block;
-  width: 160px;
-  margin-top: 15px;
+  background: linear-gradient(135deg, #ff4081, #ff1744);
   padding: 10px 15px;
-  text-align: center;
-  background-color: #ff4081;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease-in-out;
-}
-
-.buy-button:hover {
-  background-color: #ff0055;
-}
-
-/* Estilo do texto informativo sobre skincare */
-.skincare-info {
-  max-width: 800px;
-  margin: 40px auto;
-  text-align: left;
-  background: white;
-  padding: 20px;
   border-radius: 10px;
-  box-shadow: 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.skincare-info h3 {
-  color: #ff4081;
-  font-size: 1.8em;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.skincare-info h4 {
-  color: #ff1744;
-  font-size: 1.4em;
-  margin-top: 20px;
-}
-
-.skincare-info p {
-  font-size: 1.1em;
-  color: #444;
-  line-height: 1.6;
-}
-
-.skincare-info .buy-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.skincare-info .buy-container .buy-button {
   display: inline-block;
-  background: #ff4081;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+  animation: pulse 1.5s infinite alternate;
 }
 
-.skincare-info .buy-container .buy-button:hover {
-  background: #ff0055;
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.1); opacity: 1; }
 }
+
+/* Ajusta a posição das bolinhas para fora do carrossel */
+.swiper-pagination {
+  position: absolute;
+  bottom: -40px; /* Move bem para baixo do carrossel */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Mantém abaixo do botão */
+  display: flex;
+  justify-content: center;
+}
+
+/* Garante que o botão Buy Now fique sempre acima */
+.buy-button-container {
+  position: relative;
+  z-index: 10; /* Força a sobreposição acima das bolinhas */
+}
+
